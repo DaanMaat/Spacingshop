@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sequel', sans-serif;
+}
+
+.header{
+        background: linear-gradient(rgba(0, 0, 0, 0.79), rgba(0, 0, 0, 0.79)),
+          url("spacingbanner.png");
+          background-size: cover;
+        width: 100vw;
+        height: 25vw;
+        color: white;
+        text-align: center;
+        padding-top: 40vh;
+}
+
+h1{
+  position: absolute;
+  top: 2vh;
+  font-size: 25px;
+}
+
+#Webshop-name{
+  left: 3vw;
+  top: 2.5vh;
+}
+
+#Account{
+  right: 11vw;
+  top: 2.5vh;
+}
+
+#usericon{
+  position: absolute;
+  width: 3.5vw;
+  height: 7vh;
+  right: 7vw;
+  top: 1vh;
+}
+
+#shoppingicon{
+  position: absolute;
+  width: 3.5vw;
+  height: 7vh;
+  right: 2vw;
+  top: 1vh;
+}
+
+.shoppingitems{
+  background-color: white;
+  color: black;
+  width: 1.5vw;
+  height: 2.5vh;
+  border-radius: 50%;
+  position: absolute;
+  top: 0.5vh;
+  right: 1.3vw;
+}
+
+.submit1{
+right: 7vw;
+top: 1vh;
+}
+
+.submit2{
+  right: 1vw;
+  top: 1vh;
+}
+
+.submits{
+  position: absolute;
+  border: 0;
+  background: none;
+  z-index: 2;
+  height: 8vh;
+}
