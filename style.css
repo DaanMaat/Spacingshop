@@ -5,9 +5,15 @@
     font-family: 'Sequel', sans-serif;
 }
 
+.homepage{
+  background: linear-gradient(rgba(0, 0, 0, 0.79), rgba(0, 0, 0, 0.79)),
+  #6C8C81;
+  background-size: cover;
+}
+
 .header{
         background: linear-gradient(rgba(0, 0, 0, 0.79), rgba(0, 0, 0, 0.79)),
-          url("spacingbanner.png");
+          url("Images/spacingbanner.png");
           background-size: cover;
         width: 100vw;
         height: 25vw;
@@ -23,7 +29,8 @@ h1{
 }
 
 #Webshop-name{
-  left: 3vw;
+  color: white;
+  left: 6vw;
   top: 2.5vh;
 }
 
@@ -75,4 +82,91 @@ top: 1vh;
   background: none;
   z-index: 2;
   height: 8vh;
+}
+
+.menu {
+  width: 3vw;
+  height: 6vh;
+  background: none;
+  border: none;
+}
+
+.dropdown{
+  position: absolute;
+  top: 1vh;
+}
+
+.menu-btn{
+  background: none;
+  border: 0;
+  color: white;
+  font-size: 30px;
+  width: 3vw;
+  height: 6vh;
+  margin-left: 1.5vw;
+}
+
+.dropdown-menu{
+  position: absolute;
+  left: 0.6vw;
+  top: 6vh;
+  background: none;
+  text-align: left;
+  border-radius: .25rem;
+  padding: .75rem;
+  width: 12vw;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity 200ms ease-in-out, transform 400ms ease-in-out;
+}
+
+.dropdown.active > .menu-btn + .dropdown-menu{
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+#Headertext{
+  text-align: center;
+  color: white;
+  left: 25vw;
+  top: 15vh;
+  font-size: 40px
+}
+
+#Headerinfo{
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+a{
+  color: white;
+  font-size: 25px;
+  font-weight: bolder;
+  text-decoration: none;
+  transition: color 100ms ease-in-out;
+}
+
+.socialbox{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+}
+
+.socials{
+  margin: 2.7vw;
+  width: 8vw;
+  height: 16vh;
+  transition: 1s ease-in-out;
+}
+
+.socials:hover{
+  width: 10vw;
+  height: 20vh;
 }
