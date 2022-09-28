@@ -1,3 +1,10 @@
+<?php
+$user = 'root';
+$pass = 'root';
+$PDO = new PDO('mysql:host=dockerphp-master_db_1;dbname=Spacingshop', $user, $pass);
+$accData = $PDO->query('SELECT * from Accounts');
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +29,9 @@
         <h1 id="Webshop-name">SpacingShop</h1>
         <form action="https://www.twitch.tv/">
         <div class="accountbox">
-            <h1 id="Account">Mijn account</h1>
+            <?php
+            echo "<h1 id='Account'>"."Mijn account"."</h1>";
+            ?>
             <img id="usericon" src="Images/User icon.png">
             <input type="submit" value="                                                              " class="submit1 submits">
         </div>
