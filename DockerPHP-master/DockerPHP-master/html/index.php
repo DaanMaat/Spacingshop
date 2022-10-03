@@ -1,8 +1,5 @@
 <?php
-$user = 'root';
-$pass = 'root';
-$PDO = new PDO('mysql:host=dockerphp-master_db_1;dbname=Spacingshop', $user, $pass);
-$accData = $PDO->query('SELECT * from Accounts');
+session_start();
 
 ?>
 <!DOCTYPE html>
@@ -24,37 +21,43 @@ $accData = $PDO->query('SELECT * from Accounts');
                 <br>
                 <br>
                 <a href="shop.html">Shop</a>
+                <br>
+                <br>
+                <?php if($_SESSION['Username'] == 'Spacingunicorn'){
+                 echo '<a href="Admin.html">Admin-panel</a>'; 
+                } ?>
             </div>
         </div>
-        <h1 id="Webshop-name">SpacingShop</h1>
-        <form action="https://www.twitch.tv/">
-        <div class="accountbox">
-            <?php
-            echo "<h1 id='Account'>"."Mijn account"."</h1>";
-            ?>
-            <img id="usericon" src="Images/User icon.png">
-            <input type="submit" value="                                                              " class="submit1 submits">
-        </div>
-        </form>
-        <form action="https://www.youtube.com/">
-        <div class="shoppingbox">
-        <img id="shoppingicon" src="Images/shoppingcart.png">
-        <p class="shoppingitems">0</p>
-        <input type="submit" value="                    " class="submit2 submits">
-        </div>
-        </form>
         <h1 id="Headertext">Welkom bij de officiële Spacingunicorn webshop!</h1>
+        <br>
         <p id="Headerinfo">Welkom op mijn webshop! Ik ben Larissa en ik ben 20 jaar. <br> Hier kun je merch halen! <br>
              Druk op de 3 streepjes linksboven om naar de webshop te gaan. <br> Hieronder kun je mijn socials vinden.<br>
             V              V              V</p>
-    </div>
+        <?php
+        if($_SESSION['Ingelogd']){
+        ?>
+        <?php echo "<a href='https://www.youtube.com/' class='Account'>".$_SESSION['Username']."</a>
+        <a class='Uitlog-btn' href='login.php?loguit'>Uitloggen</a>"; ?>
+        <img id='usericon' src='Images/User icon.png'>
+        </div>
+       <?php } else { ?>
+        <?php echo "<a href='login.php' class='Account'>Inloggen</a>"; ?>
+                <img id='usericon' src='Images/User icon.png'>
+                </div>
+        <?php } ?>
+        <a href="https://www.twitch.tv/spacingunicorn"><img id="shoppingicon" src="Images/shoppingcart.png"></a>
+        <p class="shoppingitems">0</p>
+    </div>  
+    <br> <br> <br> <br>
     <div class="socialbox">
     <a href="https://www.twitch.tv/spacingunicorn" ><img src="Images/twitch.png" alt="Twitch" class="socials"></a>
     <a href="https://www.tiktok.com/@spacingunicorn"><img src="Images/tiktok.png" alt="TikTok" class="socials"></a>
     <a href="https://www.youtube.com/channel/UCSVfNo-cN0MzqiLxHtDiw0A"><img src="Images/youtube.png" alt="Youtube" class="socials"></a>
     <a href="https://www.instagram.com/spacingunicorn/"><img src="Images/Instagram.png" alt="Instagram" class="socials"></a>
     <a href="https://twitter.com/spacingunicorn"><img src="Images/twitter.png" alt="Twitter" class="socials"></a>
+    <a href="https://discord.gg/D7tf5wy"><img src="Images/discord.png" alt="Discord" class="socials"></a>
     </div>
     <script src="script.js"></script>
 </body>
 </html>
+

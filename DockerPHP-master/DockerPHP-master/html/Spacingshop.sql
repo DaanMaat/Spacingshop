@@ -15,9 +15,9 @@ USE `Spacingshop` ;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Accounts` (
   `AccountID` INT NOT NULL,
-  `gebruikersnaam` VARCHAR(255) NOT NULL,
-  `Wachtwoord` VARCHAR(255) NOT NULL,
-  `email` VARCHAR(255),
+  `Username` VARCHAR(255) NOT NULL,
+  `Password` VARCHAR(255) NOT NULL,
+  `Email` VARCHAR(255),
   `Role` VARCHAR(255),
   PRIMARY KEY (`AccountID`))
 ENGINE = InnoDB;
@@ -28,13 +28,13 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `Merch` (
   `MerchID` INT NOT NULL,
   `Merch` VARCHAR(255) NOT NULL,
-  `Prijs` DECIMAL(3.2) NOT NULL,
+  `Price` DECIMAL(3.2) NOT NULL,
   `Voorraad` INT NOT NULL,
   PRIMARY KEY (`MerchID`))
 ENGINE = InnoDB;
 
-INSERT INTO Accounts (`AccountID`, `gebruikersnaam`, `Wachtwoord`, `email`, `Role`) 
-VALUES ('1', 'SpacingUnicorn', '768_dy3W', null, 'Admin');
+INSERT INTO Accounts (`AccountID`, `Username`, `Password`, `Email`, `Role`) 
+VALUES ('1', 'Spacingunicorn', '768_dy3W', 'spacingunicorn@gmail.com', 'Admin');
 
 SELECT * FROM Accounts;
 

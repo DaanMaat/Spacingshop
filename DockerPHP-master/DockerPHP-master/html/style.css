@@ -5,6 +5,89 @@
     font-family: 'Sequel', sans-serif;
 }
 
+
+
+#usericon{
+  position: absolute;
+  background: none;
+  border: 0;
+  color: white;
+  font-size: 30px;
+  width: 3.5vw;
+  height: 7vh;
+  right: 7vw;
+  top: 1vh;
+}
+
+.Uitlog-btn {
+  position: absolute;
+  right: 13vw;
+  transform: translateY(-56vh);
+  color: white;
+}
+
+.inlogpage{
+  background-color: rgb(52, 52, 52);
+}
+
+.h1-inlog{
+  top: 30vh;
+  color: white;
+  text-align: center;
+}
+
+.h2-inlog{
+  font-size: 40px;
+  color: white;
+  margin: 20px 0px 0px 60px;
+  transition: 1.2s;
+}
+
+.h2-inlog:hover{
+  font-size: 40px;
+  color: rgb(97, 97, 97);
+  transform: translateX(-40px);
+}
+
+.inlog-box1{
+  position: absolute;
+  top: 40%;
+  right: 51%;
+  width: 13vw;
+  height: 4vh;
+}
+
+.inlog-box2{
+  position: absolute;
+  top: 40%;
+  left: 51%;
+  width: 13vw;
+  height: 4vh;
+}
+
+.submit-btn{
+  position: absolute;
+  width: 8%;
+  height: 6%;
+  left: 46%;
+  top: 48%;
+  border: solid white 3px;
+  color: white;
+  border-radius: 200px;
+  background: none;
+  font-size: 26px;
+  transition: 1s;
+}
+
+.submit-btn:hover{
+  border: solid rgb(82, 82, 82) 3px;
+  color: rgb(82, 82, 82);
+  border-radius: 200px;
+  background: none;
+  font-size: 26px;
+  transition: 1s;
+}
+
 .homepage{
   background: linear-gradient(rgba(0, 0, 0, 0.79), rgba(0, 0, 0, 0.79)),
   #6C8C81;
@@ -13,8 +96,8 @@
 
 .header{
         background: linear-gradient(rgba(0, 0, 0, 0.79), rgba(0, 0, 0, 0.79)),
-          url("Images/spacingbanner.png");
-          background-size: cover;
+        url("Images/spacingbanner.png");
+        background-size: cover;
         width: 100vw;
         height: 25vw;
         color: white;
@@ -22,9 +105,10 @@
         padding-top: 40vh;
 }
 
-h1{
+.Account{
   position: absolute;
-  top: 2vh;
+  right: 11vw;
+  top: 2.5vh;
   font-size: 25px;
 }
 
@@ -32,19 +116,6 @@ h1{
   color: white;
   left: 6vw;
   top: 2.5vh;
-}
-
-#Account{
-  right: 11vw;
-  top: 2.5vh;
-}
-
-#usericon{
-  position: absolute;
-  width: 3.5vw;
-  height: 7vh;
-  right: 7vw;
-  top: 1vh;
 }
 
 #shoppingicon{
@@ -64,24 +135,7 @@ h1{
   position: absolute;
   top: 0.5vh;
   right: 1.3vw;
-}
-
-.submit1{
-right: 7vw;
-top: 1vh;
-}
-
-.submit2{
-  right: 1vw;
-  top: 1vh;
-}
-
-.submits{
-  position: absolute;
-  border: 0;
-  background: none;
-  z-index: 2;
-  height: 8vh;
+  text-align: center;
 }
 
 .menu {
