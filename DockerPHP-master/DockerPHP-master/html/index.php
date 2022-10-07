@@ -30,6 +30,23 @@ $_SESSION['false-user-pass'] = "";
                 } ?>
             </div>
         </div>
+        <h1 id="Webshop-name">SpacingShop</h1>
+        <form action="https://www.twitch.tv/">
+        <div class="accountbox">
+            <?php
+            echo "<h1 id='Account'>"."Mijn account"."</h1>";
+            ?>
+            <img id="usericon" src="Images/User icon.png">
+            <input type="submit" value="                                                              " class="submit1 submits">
+        </div>
+        </form>
+        <form action="https://www.youtube.com/">
+        <div class="shoppingbox">
+        <img id="shoppingicon" src="Images/shoppingcart.png">
+        <p class="shoppingitems">0</p>
+        <input type="submit" value="                    " class="submit2 submits">
+        </div>
+        </form>
         <h1 id="Headertext">Welkom bij de officiële Spacingunicorn webshop!</h1>
         <br>
         <p id="Headerinfo">Welkom op mijn webshop! Ik ben Larissa en ik ben 20 jaar. <br> Hier kun je merch halen! <br>
