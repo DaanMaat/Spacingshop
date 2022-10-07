@@ -64,7 +64,7 @@ $Ingelogd = $_SESSION['Ingelogd'];
                         <h1 class="merch-info">'.$merchnaam.'</h1>
                         <h1 class="merch-info">€'.$prijs.'</h1>';                    
                         if($merchvoorraad != 0){
-                        echo "<button class='buy-btn'>Bestel nu</button>";
+                        echo "<button class='buy-btn'>+ Toevoegen</button>";
                         } else {echo "<button class='sold-out'>Uitverkocht</button>";}
                 '</div>
                 </div>

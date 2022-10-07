@@ -26,7 +26,7 @@ $_SESSION['false-user-pass'] = "";
             <br>
             <?php if($username == 'Spacingunicorn'){
                  echo '<a href="#">Admin-panel</a>'; 
-                } ?>
+                } if($Ingelogd){"<a href='login.php?loguit'>Uitloggen</a>";}?> 
         </div>
     </div>
 

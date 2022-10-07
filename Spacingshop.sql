@@ -4,9 +4,6 @@ SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
--- -----------------------------------------------------
--- Schema mydb
--- -----------------------------------------------------
 CREATE DATABASE	 IF NOT EXISTS `Spacingshop` DEFAULT CHARACTER SET utf8 ;
 USE `Spacingshop` ;
 
@@ -38,7 +35,7 @@ INSERT INTO Accounts (`AccountID`, `Username`, `Password`, `Email`, `Role`)
 VALUES ('1', 'Spacingunicorn', '768_dy3W', 'spacingunicorn@gmail.com', 'Admin');
 
 INSERT INTO Merch (`MerchID`, `Merch`, `MerchImage`, `Price`, `Stock`) 
-VALUES ('2', 'Spacingsweater', 'spacingmerch1', '30', '4'), ('1', 'Spacingsokken', 'spacingmerch2', '10', '0');
+VALUES ('2', 'Spacingshirt', 'spacingmerch1', '30', '4'), ('1', 'Spacingsweater', 'spacingmerch2', '10', '0');
 
 
 SET SQL_MODE=@OLD_SQL_MODE;
