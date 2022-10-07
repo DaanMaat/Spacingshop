@@ -5,7 +5,9 @@
     font-family: 'Sequel', sans-serif;
 }
 
-
+.webshop{
+  background-color: rgb(146, 146, 146);
+}
 
 #usericon{
   position: absolute;
@@ -22,11 +24,15 @@
 .Uitlog-btn {
   position: absolute;
   right: 13vw;
-  transform: translateY(-56vh);
+  transform: translateY(-55vh);
   color: white;
 }
 
-.inlogpage{
+.inlogpage {
+  background-color: rgb(52, 52, 52);
+}
+
+.controlpage {
   background-color: rgb(52, 52, 52);
 }
 
@@ -223,4 +229,83 @@ a{
 .socials:hover{
   width: 10vw;
   height: 20vh;
+}
+
+.red{
+  color: red;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.shop-section{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 85vw;
+  margin-top: 3vh;
+  margin-left: 7.5vw;
+  margin-right: 7.5vw;
+}
+
+.merch-box{
+  border: solid black 0.5vw;
+  border-radius: 1.8vw;
+  width: 20vw;
+  height: 57vh;
+  padding-bottom: 3vw;
+  margin: 5vw;
+  background: linear-gradient(rgba(0, 0, 0, 0.29), rgba(0, 0, 0, 0.55)),
+  #6C8C81;
+}
+
+.merchImg{
+  border-radius: 1.8vw;
+  width: 19vw;
+  height: 37vh;
+  transform: translateY(-2px);
+}
+.sold-out{
+  border: solid rgba(255, 255, 255, 0.39) 0.3vw;
+  border-radius: 1vw;
+  color: rgba(255, 255, 255, 0.39);
+  background: none;
+  width: 15vw;
+  height: 5vh;
+  transition:400ms;
+  margin-left: 0.5vw;
+  margin-top: 1vh;
+}
+
+.buy-btn{
+  border: solid white 0.3vw;
+  border-radius: 1vw;
+  color: white;
+  background: none;
+  width: 15vw;
+  height: 5vh;
+  transition:400ms;
+  margin-left: 0.5vw;
+  margin-top: 1vh;
+}
+
+.btn:hover{
+  border: solid rgb(145, 145, 145) 0.4vw;
+  border-radius: 1vw;
+  color: rgb(145, 145, 145);
+  background: none;
+}
+
+.btn:active{
+  border: solid rgb(17, 17, 17) 0.4vw;
+  border-radius: 1vw;
+  color: rgb(17, 17, 17);
+  background: none;
+}
+
+.merch-info{
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
 }

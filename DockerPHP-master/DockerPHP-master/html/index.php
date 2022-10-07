@@ -1,6 +1,8 @@
 <?php
 session_start();
-
+$username = $_SESSION['Username'];
+$Ingelogd = $_SESSION['Ingelogd'];
+$_SESSION['false-user-pass'] = "";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,11 +22,11 @@ session_start();
                 <a href="#">Home</a>
                 <br>
                 <br>
-                <a href="shop.html">Shop</a>
+                <a href="shop.php">Shop</a>
                 <br>
                 <br>
-                <?php if($_SESSION['Username'] == 'Spacingunicorn'){
-                 echo '<a href="Admin.html">Admin-panel</a>'; 
+                <?php if($username == 'Spacingunicorn'){
+                 echo '<a href="admin.php">Admin-panel</a>'; 
                 } ?>
             </div>
         </div>
@@ -34,16 +36,15 @@ session_start();
              Druk op de 3 streepjes linksboven om naar de webshop te gaan. <br> Hieronder kun je mijn socials vinden.<br>
             V              V              V</p>
         <?php
-        if($_SESSION['Ingelogd']){
-        ?>
-        <?php echo "<a href='https://www.youtube.com/' class='Account'>".$_SESSION['Username']."</a>
+        if(!$Ingelogd){ ?>
+                <?php echo "<a href='login.php' class='Account'>Inloggen</a>"; ?>
+                <img id='usericon' src='Images/User icon.png'>
+                </div> 
+       <?php } else { ?>
+        <?php echo "<a href='https://www.youtube.com/' class='Account'>".$username."</a>
         <a class='Uitlog-btn' href='login.php?loguit'>Uitloggen</a>"; ?>
         <img id='usericon' src='Images/User icon.png'>
         </div>
-       <?php } else { ?>
-        <?php echo "<a href='login.php' class='Account'>Inloggen</a>"; ?>
-                <img id='usericon' src='Images/User icon.png'>
-                </div>
         <?php } ?>
         <a href="https://www.twitch.tv/spacingunicorn"><img id="shoppingicon" src="Images/shoppingcart.png"></a>
         <p class="shoppingitems">0</p>
@@ -60,4 +61,3 @@ session_start();
     <script src="script.js"></script>
 </body>
 </html>
-

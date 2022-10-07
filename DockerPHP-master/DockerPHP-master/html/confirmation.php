@@ -13,10 +13,12 @@ try{
     $_SESSION['Username'] = $username;
     $_SESSION['A_ID'] = $accData['AccountID'];
     $_SESSION['Ingelogd'] = true;
+    $_SESSION['false-user-pass'] = "";
     header("location: index.php");
     } else {
-    header("location: login.php");
     $_SESSION['Ingelogd'] = false;
+    $_SESSION['false-user-pass'] = "<p class='red'>Onjuiste gebruikersnaam of wachtwoord!<p>";
+    header("location: login.php");
     }
     }        
 } catch (PDOException $e) {

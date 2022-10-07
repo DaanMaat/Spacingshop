@@ -1,7 +1,5 @@
 <?php
 session_start();
-    $_SESSION = array();
-    session_destroy();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,12 +11,15 @@ session_start();
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="icon" type="image/x-icon" href="Images/spacingcon.png">
 <body class="inlogpage">
-<a href="index.php"><h2 class="h2-inlog">< Go back</h2></a>
+<a href="index.php"><h2 class="h2-inlog">< Homepage</h2></a>
 <h1 class="h1-inlog"><em>Inloggen</em></h1>
 <form action="confirmation.php" method="POST">
     <input class="inlog-box1 inlog-box" type="text" name="username" placeholder="username" required>
     <input class="inlog-box2 inlog-box" type="password" name="password" placeholder="password" required>
     <input class="submit-btn btn1" type="submit" name="Button" value="Log in"> <br>
 </form>
+<?php
+echo $_SESSION['false-user-pass'];
+?>
 </body>
 </html>
