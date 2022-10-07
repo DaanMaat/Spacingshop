@@ -28,15 +28,18 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `Merch` (
   `MerchID` INT NOT NULL,
   `Merch` VARCHAR(255) NOT NULL,
+  `MerchImage` VARCHAR(255),
   `Price` DECIMAL(3.2) NOT NULL,
   `Stock` INT NOT NULL,
   PRIMARY KEY (`MerchID`))
 ENGINE = InnoDB;
 
 INSERT INTO Accounts (`AccountID`, `Username`, `Password`, `Email`, `Role`) 
-VALUES ('1', 'SpacingUnicorn', '768_dy3W', null, 'Admin');
+VALUES ('1', 'Spacingunicorn', '768_dy3W', 'spacingunicorn@gmail.com', 'Admin');
 
-SELECT * FROM Accounts;
+INSERT INTO Merch (`MerchID`, `Merch`, `MerchImage`, `Price`, `Stock`) 
+VALUES ('2', 'Spacingsweater', 'spacingmerch1', '30', '4'), ('1', 'Spacingsokken', 'spacingmerch2', '10', '0');
+
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
