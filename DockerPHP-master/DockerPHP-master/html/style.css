@@ -2,8 +2,251 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Sequel', sans-serif;
-}
+    font-family: 'Sequel', sans-serif; 
+  } 
+   
+  .webshop{ 
+    background-color: rgb(146, 146, 146); 
+  } 
+   
+  #usericon{ 
+    position: fixed; 
+    background: none; 
+    border: 0; 
+    color: white; 
+    font-size: 30px; 
+    width: 3.5vw; 
+    height: 7vh; 
+    right: 7vw; 
+    top: 1vh; 
+  } 
+   
+  .Uitlog-btn { 
+    position: fixed; 
+    right: 13vw; 
+    transform: translateY(-52vh); 
+    color: white; 
+  } 
+   
+  .inlogpage { 
+    background-color: rgb(52, 52, 52); 
+  } 
+   
+  .controlpage { 
+    background-color: rgb(52, 52, 52); 
+  } 
+   
+  .h1-inlog{ 
+    top: 30vh; 
+    color: white; 
+    text-align: center; 
+  } 
+   
+  .h2-inlog{ 
+    font-size: 40px; 
+    color: white; 
+    margin: 20px 0px 0px 60px; 
+    transition: 1.2s; 
+  } 
+   
+  .h2-inlog:hover{ 
+    font-size: 40px; 
+    color: rgb(97, 97, 97); 
+    transform: translateX(-40px); 
+  } 
+   
+  .inlog-box1{ 
+    position: absolute; 
+    top: 40%; 
+    right: 51%; 
+    width: 13vw; 
+    height: 4vh; 
+  } 
+   
+  .inlog-box2{ 
+    position: absolute; 
+    top: 40%; 
+    left: 51%; 
+    width: 13vw; 
+    height: 4vh; 
+  } 
+   
+  .submit-btn{ 
+    position: absolute; 
+    width: 8%; 
+    height: 6%; 
+    left: 46%; 
+    top: 48%; 
+    border: solid white 3px; 
+    color: white; 
+    border-radius: 200px; 
+    background: none; 
+    font-size: 26px; 
+    transition: 1s; 
+  } 
+   
+  .submit-btn:hover{ 
+    border: solid rgb(82, 82, 82) 3px; 
+    color: rgb(82, 82, 82); 
+    border-radius: 200px; 
+    background: none; 
+    font-size: 26px; 
+    transition: 1s; 
+  } 
+   
+  .homepage{ 
+    background: linear-gradient(rgba(0, 0, 0, 0.79), rgba(0, 0, 0, 0.79)), 
+    #6C8C81; 
+    background-size: cover; 
+  } 
+   
+  .header{ 
+          background: linear-gradient(rgba(0, 0, 0, 0.79), rgba(0, 0, 0, 0.79)), 
+          url("Images/spacingbanner.png"); 
+          background-size: cover; 
+          width: 100vw; 
+          height: 25vw; 
+          color: white; 
+          text-align: center; 
+          padding-top: 40vh; 
+  } 
+   
+  .Account{ 
+    position: fixed; 
+    right: 11vw; 
+    top: 2.5vh; 
+    font-size: 25px; 
+  } 
+   
+  #Webshop-name{ 
+    color: white; 
+    left: 6vw; 
+    top: 2.5vh; 
+  } 
+   
+  #shoppingicon{ 
+    position: fixed; 
+    width: 3.5vw; 
+    height: 7vh; 
+    right: 2vw; 
+    top: 1vh; 
+  } 
+   
+  .shoppingitems{ 
+    position: fixed; 
+    background-color: white; 
+    color: black; 
+    width: 1.5vw; 
+    height: 2.5vh; 
+    border-radius: 50%; 
+    top: 0.5vh; 
+    right: 1.3vw; 
+    text-align: center; 
+  } 
+   
+  .menu { 
+    position: fixed;
+    width: 3vw; 
+    height: 6vh; 
+    background: none; 
+    border: none; 
+  } 
+   
+  .dropdown{ 
+    position: fixed; 
+    top: 1vh; 
+  } 
+   
+  .menu-btn{ 
+    position: fixed;
+    background: none; 
+    border: 0; 
+    color: white; 
+    font-size: 30px; 
+    width: 3vw; 
+    height: 6vh; 
+    margin-left: 1.5vw; 
+  } 
+   
+  .dropdown-menu{ 
+    position: fixed; 
+    left: 0.6vw; 
+    top: 6vh; 
+    background: none; 
+    text-align: left; 
+    border-radius: .25rem; 
+    padding: .75rem; 
+    width: 12vw; 
+    opacity: 0; 
+    pointer-events: none; 
+    transform: translateY(-10px); 
+    transition: opacity 200ms ease-in-out, transform 400ms ease-in-out; 
+  } 
+   
+  .dropdown.active > .menu-btn + .dropdown-menu{ 
+    opacity: 1; 
+    transform: translateY(0); 
+    pointer-events: auto; 
+  } 
+   
+  #Headertext{ 
+    text-align: center; 
+    color: white; 
+    left: 25vw; 
+    top: 15vh; 
+    font-size: 40px 
+  } 
+   
+  #Headerinfo{ 
+    text-align: center; 
+    color: white; 
+    font-size: 20px; 
+    font-weight: bold; 
+  } 
+   
+  a{ 
+    color: white; 
+    font-size: 25px; 
+    font-weight: bolder; 
+    text-decoration: none; 
+    transition: color 100ms ease-in-out; 
+  } 
+   
+  .socialbox{ 
+    display: flex; 
+    flex-direction: row; 
+    flex-wrap: nowrap; 
+    justify-content: space-around; 
+    align-items: center; 
+    align-content: center; 
+  } 
+   
+  .socials{ 
+    margin: 2.7vw; 
+    width: 8vw; 
+    height: 16vh; 
+    transition: 1s ease-in-out; 
+  } 
+   
+  .socials:hover{ 
+    width: 10vw; 
+    height: 20vh; 
+  } 
+   
+  .red{ 
+    color: red; 
+    text-align: center; 
+    font-size: 24px; 
+    font-weight: bold; 
+  } 
+   
+  .shop-section{ 
+    display: flex;
+    width: 85vw; 
+    margin-top: 8vh; 
+    margin-left: 7.5vw; 
+    margin-right: 7.5vw; 
+  } 
 
 /* ----Homepage----  */
 .homepage{
