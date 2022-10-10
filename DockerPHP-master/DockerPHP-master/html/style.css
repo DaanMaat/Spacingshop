@@ -529,14 +529,14 @@ a{
   margin-top: 1vh;
 }
 
-.btn:hover{
-  border: solid rgb(145, 145, 145) 0.4vw;
+.buy-btn:hover{
+  border: solid rgb(94, 94, 94) 0.4vw;
   border-radius: 1vw;
-  color: rgb(145, 145, 145);
+  color: rgb(94, 94, 94);
   background: none;
 }
 
-.btn:active{
+.buy-btn:active{
   border: solid rgb(17, 17, 17) 0.4vw;
   border-radius: 1vw;
   color: rgb(17, 17, 17);
