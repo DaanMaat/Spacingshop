@@ -512,7 +512,6 @@ a{
   background: none;
   width: 15vw;
   height: 5vh;
-  transition:400ms;
   margin-left: 0.5vw;
   margin-top: 1vh;
 }
@@ -524,9 +523,9 @@ a{
   background: none;
   width: 15vw;
   height: 5vh;
-  transition:400ms;
   margin-left: 0.5vw;
   margin-top: 1vh;
+  transition:450ms;
 }
 
 .buy-btn:hover{
