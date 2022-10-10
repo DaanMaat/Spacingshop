@@ -21,13 +21,6 @@
     top: 1vh; 
   } 
    
-  .Uitlog-btn { 
-    position: fixed; 
-    right: 13vw; 
-    transform: translateY(-52vh); 
-    color: white; 
-  } 
-   
   .inlogpage { 
     background-color: rgb(52, 52, 52); 
   } 
@@ -155,17 +148,6 @@
   .dropdown{ 
     position: fixed; 
     top: 1vh; 
-  } 
-   
-  .menu-btn{ 
-    position: fixed;
-    background: none; 
-    border: 0; 
-    color: white; 
-    font-size: 30px; 
-    width: 3vw; 
-    height: 6vh; 
-    margin-left: 1.5vw; 
   } 
    
   .dropdown-menu{ 
