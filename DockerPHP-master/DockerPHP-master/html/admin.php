@@ -1,7 +1,7 @@
 <?php
 session_start();
 $username = $_SESSION['Username'];
-$Ingelogd = $_SESSION['Ingelogd'];
+$ingelogd = $_SESSION['Ingelogd'];
 $_SESSION['false-user-pass'] = "";
 ?>
 <!DOCTYPE html>

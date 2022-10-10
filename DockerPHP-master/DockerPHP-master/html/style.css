@@ -5,12 +5,48 @@
     font-family: 'Sequel', sans-serif;
 }
 
-.webshop{
-  background-color: rgb(146, 146, 146);
+/* ----Homepage----  */
+.homepage{
+  background: linear-gradient(rgba(0, 0, 0, 0.79), rgba(0, 0, 0, 0.79)),
+  #6C8C81;
+  background-size: cover;
+}
+
+.grid--container{
+  display: grid;
+  grid-template-columns: repeat(2);
+  grid-template-rows: repeat(3);
+}
+
+.header{
+  background: linear-gradient(rgba(0, 0, 0, 0.79), rgba(0, 0, 0, 0.79)),
+  url("Images/spacingbanner.png");
+  background-size: cover;
+  width: 100vw;
+  height: 25vw;
+  color: white;
+  text-align: center;
+}
+
+.Account{
+  position: fixed;
+  right: 11vw;
+  top: 2.5vh;
+  font-size: 25px;
+}
+
+#Webshop-name{
+  color: white;
+  left: 6vw;
+  top: 2.5vh;
+}
+
+.userdata{
+  position: fixed;
 }
 
 #usericon{
-  position: absolute;
+  position: fixed;
   background: none;
   border: 0;
   color: white;
@@ -22,11 +58,127 @@
 }
 
 .Uitlog-btn {
-  position: absolute;
+  position: fixed;
   right: 13vw;
-  transform: translateY(-55vh);
+  top: 7vh;
   color: white;
 }
+
+#shoppingicon{
+  position: fixed;
+  width: 3.5vw;
+  height: 7vh;
+  right: 2vw;
+  top: 1vh;
+}
+
+.shoppingitems{
+  background-color: white;
+  color: black;
+  width: 1.5vw;
+  height: 2.5vh;
+  border-radius: 50%;
+  position: fixed;
+  top: 0.5vh;
+  right: 1.3vw;
+  text-align: center;
+}
+
+.menu {
+  width: 3vw;
+  height: 6vh;
+  background: none;
+  border: none;
+}
+
+.dropdown{
+  position: fixed;
+  top: 1vh;
+  left: 1.5vw;
+}
+
+.menu-btn{
+  position: fixed;
+  background: none;
+  border: 0;
+  color: white;
+  font-size: 30px;
+  width: 3vw;
+  height: 6vh;
+}
+
+.dropdown-menu{
+  position: fixed;
+  top: 6vh;
+  left: 0.1vw;
+  background: none;
+  text-align: left;
+  border-radius: .25rem;
+  padding: .75rem;
+  width: 12vw;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity 200ms ease-in-out, transform 400ms ease-in-out;
+}
+
+.dropdown.active > .menu-btn + .dropdown-menu{
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.Infodata{
+  grid-row: 2 / 3;
+  text-align: center;
+  color: white;
+  left: 25vw;
+  top: 15vh;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#Bodytext{
+  font-size: 40px;
+}
+
+a{
+  color: white;
+  font-size: 25px;
+  font-weight: bolder;
+  text-decoration: none;
+  transition: color 100ms ease-in-out;
+}
+
+.socialbox{
+  grid-row: 3 / 4;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+}
+
+.socials{
+  margin: 2.7vw;
+  width: 8vw;
+  height: 16vh;
+  transition: 1s ease-in-out;
+}
+
+.socials:hover{
+  width: 10vw;
+  height: 20vh;
+}
+
+/* ---Webshop--- */
+
+.webshop{
+  background-color: rgb(146, 146, 146);
+}
+
+
 
 .inlogpage {
   background-color: rgb(52, 52, 52);
@@ -92,143 +244,6 @@
   background: none;
   font-size: 26px;
   transition: 1s;
-}
-
-.homepage{
-  background: linear-gradient(rgba(0, 0, 0, 0.79), rgba(0, 0, 0, 0.79)),
-  #6C8C81;
-  background-size: cover;
-}
-
-.header{
-        background: linear-gradient(rgba(0, 0, 0, 0.79), rgba(0, 0, 0, 0.79)),
-        url("Images/spacingbanner.png");
-        background-size: cover;
-        width: 100vw;
-        height: 25vw;
-        color: white;
-        text-align: center;
-        padding-top: 40vh;
-}
-
-.Account{
-  position: absolute;
-  right: 11vw;
-  top: 2.5vh;
-  font-size: 25px;
-}
-
-#Webshop-name{
-  color: white;
-  left: 6vw;
-  top: 2.5vh;
-}
-
-#shoppingicon{
-  position: absolute;
-  width: 3.5vw;
-  height: 7vh;
-  right: 2vw;
-  top: 1vh;
-}
-
-.shoppingitems{
-  background-color: white;
-  color: black;
-  width: 1.5vw;
-  height: 2.5vh;
-  border-radius: 50%;
-  position: absolute;
-  top: 0.5vh;
-  right: 1.3vw;
-  text-align: center;
-}
-
-.menu {
-  width: 3vw;
-  height: 6vh;
-  background: none;
-  border: none;
-}
-
-.dropdown{
-  position: absolute;
-  top: 1vh;
-}
-
-.menu-btn{
-  background: none;
-  border: 0;
-  color: white;
-  font-size: 30px;
-  width: 3vw;
-  height: 6vh;
-  margin-left: 1.5vw;
-}
-
-.dropdown-menu{
-  position: absolute;
-  left: 0.6vw;
-  top: 6vh;
-  background: none;
-  text-align: left;
-  border-radius: .25rem;
-  padding: .75rem;
-  width: 12vw;
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(-10px);
-  transition: opacity 200ms ease-in-out, transform 400ms ease-in-out;
-}
-
-.dropdown.active > .menu-btn + .dropdown-menu{
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-}
-
-#Headertext{
-  text-align: center;
-  color: white;
-  left: 25vw;
-  top: 15vh;
-  font-size: 40px
-}
-
-#Headerinfo{
-  text-align: center;
-  color: white;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-a{
-  color: white;
-  font-size: 25px;
-  font-weight: bolder;
-  text-decoration: none;
-  transition: color 100ms ease-in-out;
-}
-
-.socialbox{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-around;
-  align-items: center;
-  align-content: center;
-}
-
-.socials{
-  margin: 2.7vw;
-  width: 8vw;
-  height: 16vh;
-  transition: 1s ease-in-out;
-}
-
-.socials:hover{
-  width: 10vw;
-  height: 20vh;
 }
 
 .red{
