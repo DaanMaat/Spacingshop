@@ -5,8 +5,8 @@ session_start();
 try{
     $user = 'root';
     $pass = 'root';
-    $dbh = new PDO('mysql:host=dockerphp-master_db_1;dbname=Spacingshop', $user, $pass);
-    foreach($dbh->query('SELECT * FROM Accounts') as $accData){
+    $db = new PDO('mysql:host=dockerphp-master_db_1;dbname=Spacingshop', $user, $pass);
+    foreach($db->query('SELECT * FROM Accounts') as $accData){
         $username = $accData['Username'];
         $password = $accData['Password'];
     if($username == $InsertedUsername && $password == $InsertedPassword){

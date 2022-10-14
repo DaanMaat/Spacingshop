@@ -2,7 +2,8 @@
 session_start();
 $username = $_SESSION['Username'];
 $ingelogd = $_SESSION['Ingelogd'];
-$_SESSION['false-user-pass'] = "";
+if($username != "Spacingunicorn"){header("location:index.php");}
+require_once('functions.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,21 +16,25 @@ $_SESSION['false-user-pass'] = "";
     <link rel="icon" type="image/x-icon" href="Images/spacingcon.png">
 </head>
 <body class="controlpage">
-     <div class="dropdown" datadropdown>
-        <input type=image class="menu-btn" datadropdownbtn src="Images/Menu icon.png"></button>
-        <div class="dropdown-menu">
-            <a href="index.php">Home</a>
-            <br>
-            <br>
-            <a href="shop.php">Shop</a>
-            <br>
-            <br>
-            <?php if($username == 'Spacingunicorn'){
-                 echo '<a href="#">Admin-panel</a>'; 
-                } if($Ingelogd){"<a href='login.php?loguit'>Uitloggen</a>";}?> 
-        </div>
+<?php echo getDropdown($username); ?>
     </div>
+    </div>
+<?php echo getUserdata($ingelogd, $username); ?>
 
+<form action="addition.php" method="POST">
+        <label class="Label">Merch Naam</label>
+        <input class="m-toevoeg m-toevoeg1" type="text" name="merchNaam" placeholder="bijv: spacingsokken" required> <br> <br> <br>
+        <label class="Label">Merch Foto</label>
+        <input class="m-toevoeg m-toevoeg2" type="file" name="merchImage" placeholder="" required> <br> <br> <br>
+        <label class="Label">Merch Prijs</label>
+        <input class="m-toevoeg m-toevoeg3" type="number" name="merchPrijs" placeholder="0" required> <br> <br> <br>
+        <label class="Label">Merch Voorraad</label>
+        <input class="m-toevoeg m-toevoeg4" type="number" name="merchVoorraad" placeholder="0" required> <br> <br> <br>
+        <label class="Label">Op=Op</label>
+        <input class="limited-btn" type="checkbox" name="limited"> <br>
+        <input type="submit" value="Voeg toe" id="Toevoeg-btn">
+    </form>
+    <?php echo $_SESSION['foutmelding'] ?>
     <script src="script.js"></script>
 </body>
 </html>

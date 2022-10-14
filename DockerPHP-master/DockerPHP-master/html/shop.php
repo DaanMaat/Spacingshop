@@ -1,8 +1,8 @@
 <?php
 session_start();
-// $_SESSION['merchImg'] = 'Images/imageIcon.png';
 $username = $_SESSION['Username'];
 $ingelogd = $_SESSION['Ingelogd'];
+$_SESSION['foutmelding'] = "";
 
 require_once('functions.php');
 ?>
@@ -23,27 +23,55 @@ require_once('functions.php');
         <?php echo getUserdata($ingelogd, $username); ?>
 <div class="shop-section">
     <?php try{
+    $mColumn1 = 1;
+    $mColumn2 = 2;
+    $mRow1 = 0;
+    $mRow2 = 1;
+    $mNumber = 0;
     $user = 'root';
     $pass = 'root';
-    $dbh = new PDO('mysql:host=dockerphp-master_db_1;dbname=Spacingshop', $user, $pass);
-    foreach($dbh->query('SELECT * FROM Merch') as $merchData){
+    $db = new PDO('mysql:host=dockerphp-master_db_1;dbname=Spacingshop', $user, $pass);
+    foreach($db->query('SELECT * FROM Merch') as $merchData){
         $merchID = $merchData['MerchID'];
         $prijs = $merchData['Price'];
         $merchnaam = $merchData['Merch'];
         $merchvoorraad = $merchData['Stock'];
-        $merchImg = $merchData['MerchImage'];
-            echo '<div class="merch-box">
-                <div class="merch-pic"><img class="merchImg" src="Images/'.$merchImg.'.png">
-                    <div class="merch-info">
-                        <br>
-                        <h1 class="merch-info">'.$merchnaam.'</h1>
-                        <h1 class="merch-info">€'.$prijs.'</h1>';                    
-                        if($merchvoorraad != 0){
-                        echo "<button class='buy-btn'>+ Toevoegen</button>";
-                        } else {echo "<button class='sold-out'>Uitverkocht</button>";}
-                '</div>
-                </div>
-            </div>';
+        $merchimg = $merchData['MerchImage'];
+        $limited = $merchData['Limited'];
+        $mNumber++;
+            echo getMerchBox($merchimg, $merchnaam, $prijs, $merchvoorraad, $limited, $mNumber);
+        if($mNumber % 3 == 0){
+            $mRow1++;
+            $mRow2++;
+            $mColumn1 = 1;
+            $mColumn2 = 2;
+            echo 
+            '<style>
+                    .merch-box'.$mNumber.'{
+                        grid-column: '.$mColumn1.' / '.$mColumn2 .';
+                        grid-row: '.$mRow1.' / '.$mRow2.';
+                    }
+             </style>
+             </div>
+             </div>
+             </div>';
+                $mColumn1++;
+                $mColumn2++;
+            
+        } else {
+            echo 
+            '<style>
+                    .mbox'.$mNumber.'{
+                        grid-column: '.$mColumn1.' / '.$mColumn2 .';
+                        grid-row: '.$mRow1.' / '.$mRow2.';
+                    }
+             </style>
+             </div>
+             </div>
+             </div>';
+                $mColumn1++;
+                $mColumn2++;
+        }
         }
         } catch (PDOException $e) {
         print "Error!: " . $e->getMessage() . "<br>";

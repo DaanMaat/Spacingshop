@@ -5,6 +5,7 @@ require_once('functions.php');
 $username = $_SESSION['Username'];
 $ingelogd = $_SESSION['Ingelogd'];
 $_SESSION['false-user-pass'] = "";
+$_SESSION['foutmelding'] = "";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +13,7 @@ $_SESSION['false-user-pass'] = "";
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spacingunicorn</title>
+    <title>Homepagina</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="icon" type="image/x-icon" href="Images/spacingcon.png">
 </head>
