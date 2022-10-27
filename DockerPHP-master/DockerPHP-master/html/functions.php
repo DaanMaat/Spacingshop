@@ -43,7 +43,7 @@ function getMerchBox($merchimg, $merchnaam, $prijs, $merchvoorraad, $limited, $m
                 <div class="merch-pic"><img class="merchImg" src="Images/'.$merchimg.'">';
                 if($limited == "on"){
                     echo '<img class="limited-sign" src="Images/op-op.png">';
-                }              
+                } else {echo '<img class="limited-sign" src="Images/empty.png">';}
                 echo   '<div class="merch-info">
                         <br>
                         <h1 class="merch-info">'.$merchnaam.'</h1>
